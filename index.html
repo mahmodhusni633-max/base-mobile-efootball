@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>بيس موبايل | eFootball</title>
+<style>
+:root{--bg:#07111f;--panel:#101e31;--panel2:#14263d;--line:#263b55;--text:#edf4ff;--muted:#a9bbd1;--cyan:#39d6c5;--gold:#f4c76a;--blue:#5a9cff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#173657 0,transparent 35%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#07111feF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:21px;font-weight:900;letter-spacing:.2px}.brand span{color:var(--cyan)}nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}nav a:hover{color:var(--cyan)}
+.hero{padding:78px 0 54px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:32px}
+.eyebrow{color:var(--cyan);font-weight:bold;font-size:13px;letter-spacing:1px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.2;margin:12px 0}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:1px solid var(--line);padding:11px 19px;border-radius:12px;font-weight:bold;display:inline-block}.btn.primary{background:var(--cyan);color:#04151b;border-color:var(--cyan)}.pitch{border:1px solid #31506c;border-radius:24px;padding:24px;background:linear-gradient(145deg,#173653,#0d1b2c);box-shadow:0 24px 70px #0005;position:relative;overflow:hidden}
+.pitch:before{content:"";position:absolute;inset:12px;border:1px solid #75cfc444;border-radius:18px;pointer-events:none}.pitch-inner{position:relative;min-height:265px;display:flex;align-items:center;justify-content:center}.field{width:190px;height:245px;border:2px solid #63c8aa88;border-radius:8px;position:relative;background:repeating-linear-gradient(0deg,#1d6b5740 0 34px,#23745b40 34px 68px)}.field:before{content:"";position:absolute;top:50%;left:0;right:0;border-top:2px solid #63c8aa88}.field:after{content:"";position:absolute;width:65px;height:65px;border:2px solid #63c8aa88;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+.player{position:absolute;width:12px;height:12px;background:var(--gold);border:2px solid #fff;border-radius:50%;box-shadow:0 0 14px #f4c76a88}.p1{top:12%;left:48%}.p2{top:28%;left:22%}.p3{top:28%;left:74%}.p4{top:48%;left:48%}.p5{top:68%;left:22%}.p6{top:68%;left:74%}.p7{top:87%;left:48%}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 56px}.stat{background:var(--panel);border:1px solid var(--line);padding:17px;border-radius:16px;text-align:center}.stat b{display:block;font-size:26px;color:var(--cyan)}.stat small{color:var(--muted)}
+section{padding:34px 0 50px;scroll-margin-top:88px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:22px}.section-head h2{font-size:27px;margin:0}.section-head p{color:var(--muted);margin:4px 0 0;font-size:14px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.search{flex:1;min-width:220px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px 15px;font:inherit}.filter{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 14px;font:inherit}
+.faq-list{display:grid;gap:10px}.faq{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:bold;display:flex;gap:12px;align-items:center}.faq summary::-webkit-details-marker{display:none}.num{color:var(--cyan);font-size:13px;min-width:28px}.faq summary:after{content:"＋";margin-right:auto;color:var(--cyan);font-size:20px}.faq[open] summary:after{content:"−"}.answer{padding:0 18px 18px;color:var(--muted)}.answer strong{color:var(--gold)}.answer p{margin:8px 0}.tag{display:inline-block;color:var(--cyan);border:1px solid #39d6c555;border-radius:30px;padding:2px 9px;font-size:11px;margin:0 0 8px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:19px}.card h3{margin:5px 0 10px;font-size:19px}.card p{color:var(--muted);margin:7px 0}.card b{color:var(--gold)}.coach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.coach{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:13px}.coach i{font-style:normal;width:36px;height:36px;border-radius:11px;background:#39d6c51c;color:var(--cyan);display:grid;place-items:center;font-weight:bold;flex-shrink:0}
+.note{border:1px solid #d5a94d66;background:#d5a94d12;padding:15px 18px;border-radius:14px;color:#e9d7ad;font-size:13px;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+.empty{display:none;text-align:center;color:var(--muted);padding:25px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.pitch{max-width:440px;width:100%;margin:auto}.cards,.coach-grid{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:12px 5px}.stat b{font-size:21px}nav{gap:10px;font-size:12px}.nav{height:auto;min-height:68px;padding:10px 0;align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home">بيس <span>موبايل</span></a><nav><a href="#mistakes">الأخطاء والحلول</a><a href="#plans">الخطط</a><a href="#coaches">المدربون</a></nav></div></header>
+<main class="wrap" id="home">
+<div class="hero">
+ <div><div class="eyebrow">دليلك التكتيكي إلى eFOOTBALL</div><h1>العب بذكاء.<br><span>سيطر على الملعب.</span></h1><p>مرجع عربي منظم لتحسين قراراتك داخل المباراة: أخطاء شائعة وحلول عملية، خطط متنوعة، وإرشادات لاختيار أسلوب المدرب المناسب.</p><div class="actions"><a class="btn primary" href="#mistakes">ابدأ من الأخطاء</a><a class="btn" href="#plans">استكشف الخطط</a></div></div>
+ <div class="pitch"><div class="pitch-inner"><div class="field"><i class="player p1"></i><i class="player p2"></i><i class="player p3"></i><i class="player p4"></i><i class="player p5"></i><i class="player p6"></i><i class="player p7"></i></div></div></div>
+</div>
+<div class="stats"><div class="stat"><b>28</b><small>خطأ وحل تكتيكي</small></div><div class="stat"><b>10</b><small>خطط متنوعة</small></div><div class="stat"><b>10</b><small>أنماط لاختيار المدرب</small></div></div>
+
+<section id="mistakes">
+ <div class="section-head"><div><div class="eyebrow">01 / دليل التحسين · 28 سؤالاً وجواباً</div><h2>الأخطاء الشائعة والحلول</h2><p>هنا كل الأسئلة والإجابات التي أرسلتها: 8 أخطاء دفاعية، و9 في بناء اللعب والهجوم، و11 في تطوير اللاعبين وإدارة المباراة والموارد. افتح أي سؤال لعرض السبب والحل.</p></div></div>
+ <div class="tools"><input class="search" id="search" type="search" placeholder="ابحث: الضغط، التمرير، التسلل..."><select class="filter" id="category"><option value="all">كل الأقسام</option><option value="def">الدفاع والتغطية</option><option value="attack">بناء اللعب والهجوم</option><option value="manage">تطوير اللاعبين وإدارة المباراة</option></select></div>
+ <div class="faq-list" id="faqList"></div><div class="empty" id="empty">لا توجد نتائج مطابقة. جرّب كلمة بحث أخرى.</div>
+</section>
+<section id="plans">
+ <div class="section-head"><div><div class="eyebrow">02 / تكتيك وتشكيلات</div><h2>10 خطط متنوعة مع شرحها</h2><p>اختر الخطة وفق لاعبيك وأسلوبك والخصم الذي تواجهه.</p></div></div>
+ <div class="cards" id="planCards"></div>
+</section>
+<section id="coaches">
+ <div class="section-head"><div><div class="eyebrow">03 / اختيار المدرب</div><h2>10 أنماط لاختيار المدرب المناسب</h2><p>هذه إرشادات حسب أسلوب اللعب، وليست ترتيباً لأسماء مدربين بعينهم.</p></div></div>
+ <div class="coach-grid" id="coachGrid"></div>
+ <div class="note">ملاحظة: خصائص المدربين واللاعبين والتوازن التكتيكي قد تتغير مع تحديثات eFootball. راجع بيانات اللعبة الحالية قبل إنفاق الموارد أو تغيير تشكيلتك.</div>
+</section>
+</main>
+<footer><div class="wrap">بيس موبايل eFootball · دليل تكتيكي عربي للاعبين</div></footer>
+<script>
+const mistakes = [
+["def","لماذا يتفوق مهاجم الخصم بانفرادات سهلة بعد فقدان الكرة؟","سحب قلبي الدفاع للضغط العالي أو تقدم الظهيرين معاً.","ثبّت قلبي الدفاع في العمق، ولا تضغط بقلب الدفاع إلا إذا كان الخطر مباشراً والظهير أو لاعب الارتكاز يغطي مكانه."],
+["def","كيف أتعامل مع الضغط باللاعب الثاني (Second Press) دون فتح مساحات؟","ترك زر الضغط المساند مفعّلاً فتفتح ممرات التمرير.","اضغط باللاعب الثاني لحصار حامل الكرة، وتحكّم يدوياً باللاعب الأقرب لإغلاق ممر التمرير العمقي أو الطرفي."],
+["def","متى أوقف الضغط العالي وأتراجع للمنطقة المتوسطة؟","الاستمرار في مطاردة الكرة بعد كسر الخصم لخط الضغط الأول.","حوّل فوراً إلى تمركز دفاعي متوسط منظم لإغلاق العمق قبل منطقة الجزاء."],
+["def","لماذا يضرب الخصم دفاعي بالكرات الطويلة خلف الظهيرين؟","اندفاع الظهيرين للأمام دون تغطية أو ترك مساحة كبيرة خلفهما.","اضبط دور الظهيرين حسب حاجتك (أو استخدم تعليمات دفاعية للظهير الأخطر) وتابع خط الدفاع بحذر عند التمرير الطويل."],
+["def","ما خطأ التشتيت العشوائي أمام المرمى؟","إرسال الكرة في منتصف الملعب تحت الضغط فتعود هجمة جديدة.","وجّه التشتيت نحو الأطراف البعيدة أو مرّر أرضياً للاعب حر قريب لبدء هجمة منظمة."],
+["def","كيف أتعامل مع المراوغات داخل منطقة الجزاء دون ارتكاب ركلة جزاء؟","الدخول العنيف أو الانزلاق المتأخر.","حافظ على مسافة أمان، وراقب اتجاه قدم الخصم ووجهته، واضغط بهدوء دون تهور."],
+["def","لماذا أستقبل أهدافاً من الكرات العرضية الأرضية داخل الـ 18؟","غياب الرقابة على اللاعب القادم من الخلف عند القائم الثاني أو نقطة الجزاء.","حوّل التحكم مبكراً لمدافع أو لاعب وسط قريب من منطقة الخطر ووجّه تمركزه نحو ممر العرضية."],
+["def","كيف أتعالج مشكلة تأخر استجابة المدافع عند تبديل اللاعب؟","الضغط العشوائي على أزرار الدفاع لحظة التبديل.","اهدأ لجزء من الثانية عند تبديل اللاعب، ثبّت اتجاه العصا اليسرى، ثم اختر التمركُز أو الضغط المحسوب."],
+["attack","لماذا أفقد الكرة بسرعة في الثلث الدفاعي؟","التمرير العرضي المباشر أمام المرمى أو تحت ضغط شديد.","استخدم لاعب الارتكاز كمحطة قريبة، أو اخرج بالكرة عبر تمريرة قصيرة آمنة للطرف الحر، أو العب كرة طويلة مضمونة للأمام."],
+["attack","ما سبب بطء أو سوء دقة التمريرات تحت الضغط؟","التمرير واللاعب غير متزن أو لم يستلم الكرة بالكامل بعد.","انتظر نصف ثانية لضبط الاستلام والاتجاه، ثم مرّر بقوة مناسبة نحو المساحة المفتوحة."],
+["attack","كيف أتعامل مع الخصم الذي يغلق العمق بالكامل؟","الإصرار على التمرير في العمق المزدحم.","افتح اللعب على الأطراف عبر الأجنحة أو الظهيرين، ثم انقل الكرة عرضياً أو قطرياً بعد سحب دفاع الخصم."],
+["attack","لماذا يضيع مهاجمي فرصاً سهلة أمام المرمى؟","التسديد بقوة زائدة دون توجيه أو التسديد بقدم ضعيفة في زاوية مغلقة.","اختر زاوية بعيدة عن الحارس، واستخدم التسديد المقوّس (Curled) أو المنخفض حسب وضع الجسم والقدم القوية."],
+["attack","متى أستخدم التمريرة البينية (Through Pass) ومتى أتجنبها؟","إرسال بينية في ظهر الدفاع والخصم يغلق المساحة أو اللاعب في وضع تسلل.","مرّر البينية فقط عندما ينطلق مهاجمك أو جناحك في مساحة واضحة وتكون زاوية التمرير مفتوحة."],
+["attack","لماذا يتكدس لاعبو خط الوسط في منطقة واحدة؟","اختيار لاعبين بنفس أسلوب اللعب أو التمركز المتقارب في خطة واحدة.","نوّع أدوار الوسط (ارتكاز دفاعي، لاعب وسط متحرك، وصانع لعب) لخلق توازن وتباعد صحي."],
+["attack","كيف أتجنب التسلل المتكرر للمهاجمين؟","التسرع في إرسال التمريرة قبل انضباط خط الهجوم.","راقب خط التسلل، ومرّر عندما يكون المهاجم قادماً من الخلف أو في خط موازٍ مسموح به."],
+["attack","لماذا أفقد السيطرة على إيقاع المباراة في وسط الملعب؟","اللعب بسرعة قصوى طوال الوقت دون تغيير الإيقاع.","نوّع بين التمرير الهادئ لحفظ الكرة والتسارع المفاجئ في الثلث الأخير."],
+["attack","كيف أتعامل مع الخصم الذي يعتمد على الهجمات المرتدة؟","ترك المساحات خلف الخطوط عند فقدان الكرة.","قلل من التمرير المجازف في مناطق خطرة، وتأكّد من وجود تغطية خلف المهاجمين والوسط قبل الهجوم الكامل."],
+["manage","ما خطأ رفع التقييم الإجمالي للاعب على حساب دوره؟","توزيع نقاط عشوائي لزيادة رقم عام لا يخدم أسلوبك.","وزّع النقاط حسب المركز والدور (مثلاً: سرعة وتحمل للجناح، وتمركز دفاعي وتحمل للارتكاز)."],
+["manage","لماذا ينهار أداء فريقي في آخر 15 دقيقة من المباريات المصنّفة؟","إرهاق اللاعبين الأساسيين وعدم إجراء تبديلات في الوقت المناسب.","أجرِ تبديلات بين الدقيقة 60 و70 للاعبين الأكثر استنزافاً للطاقة، خاصة في الوسط والأطراف والهجوم."],
+["manage","كيف أتصرف عندما أتقدم بهدف أو هدفين في الدقائق الأخيرة؟","الاستمرار بالاندفاع الهجومي أو التشتيت العشوائي تحت الضغط.","احتفظ بالكرة بتمريرات آمنة، وأدخل لاعبين طازجين بقدرات دفاعية أو تحكم جيد، وهدّئ النسق."],
+["manage","ما خطأ الإنفاق العشوائي للعملات والموارد؟","صرف الموارد في كل حدث دون خطة واضحة لتشكيلتك الأساسية.","حدّد المراكز التي تحتاج تطويراً فعلياً في تشكيلتك، وادّخر الموارد للإضافات المؤثرة حقاً."],
+["manage","كيف أتعامل مع تأثير السهم (الحالة/اللياقة) قبل المباراة؟","إشراك لاعب بحالة سيئة لمجرد شهرته أو تقييمه.","استبدل اللاعب ذي الحالة المنخفضة ببديل جاهز من الدكة يملك حالة أفضل وملاءمة تكتيكية."],
+["manage","لماذا أقع في فخ تغيير الخطة بعد خسارة مباراة واحدة؟","رد الفعل العاطفي السريع وتغيير كل شيء باستمرار.","اختبر الخطة على 5 إلى 10 مباريات على الأقل لتقييمها بموضوعية قبل الحكم عليها."],
+["manage","كيف أتجنب أخطاء التمرير تحت تأثير اللاج أو ثقل الاتصال؟","محاولة مراوغات دقيقة أو تمريرات قصيرة جداً في مناطق ضيقة.","بسّط اللعب، واعتمد على التمرير الواضح والقرارات المبكرة والآمنة."],
+["manage","ما خطأ إهمال التناغم بين أسلوب اللعب والمدرب واللاعبين؟","وضع لاعبين في مراكز أو أدوار لا تخدم أسلوب اللعب الأساسي.","راجع توافق أسلوب اللعب والمركز قبل تثبيت اللاعب في التشكيلة الأساسية."],
+["manage","كيف أستفيد من الضربات الثابتة والركنيات والرميات الجانبية؟","تنفيذها بسرعة دون تركيز أو إهدارها بسهولة.","اختر المنفّذ صاحب الدقة المناسبة، ووجّه الكرة نحو لاعب يمتلك قفزة أو تمركزاً جيداً، أو نفّذ تمريرة قصيرة منظمة."],
+["manage","لماذا أخسر المواجهات الفردية في الكرات الهوائية؟","إشراك لاعبين قصار القامة أو ضعاف القفز في مواقف هوائية حاسمة.","راعِ الطول والقفز والالتحام في قلبي الدفاع والمهاجم المستهدف للكرات العالية."],
+["manage","كيف أطور مستواي دون إضاعة وقتي؟","اللعب المتواصل لساعات طويلة بانفعال دون مراجعة الأخطاء.","ركّز على خطأ واحد أو اثنين في كل جلسة لعب، وطبّق الحل عملياً في مباريات محددة."]
+];
+const plans = [
+["4-2-1-3","هجمات مرتدة سريعة / Quick Counter","تحولات خاطفة من الدفاع إلى الهجوم عبر الأجنحة السريعة وصانع لعب رقم 10.","ارتكاز دفاعي لتأمين العمق + ارتكاز مساند، جناحان سريعان لضرب المساحات، ومهاجم صريح يتحرك خلف الخطوط.","أمام الخصوم الذين يتركون مساحات خلف دفاعهم أو يتقدمون هجومياً."],
+["4-3-3","استحواذ / Possession Game","سيطرة على الكرة وتمرير قصير متدرج لبناء الهجمة وفتح الثغرات بالصبر.","ثلاثة لاعبي وسط يوزعون الكرة ويحافظون على الإيقاع، مع أجنحة تفتح العرض أو تدخل للعمق حسب الموقف.","عندما تريد إبطاء نسق المباراة وتقليل فرص الخصم في امتلاك الكرة."],
+["4-1-2-3","هجوم متوازن بأجنحة ووسط هجومي","ربط قوي بين خط الوسط الهجومي والثلاثي الأمامي مع محور دفاعي وحيد يغطي الخلف.","محور ارتكاز منضبط جداً + لاعبا وسط متقدمان/صانعا لعب + ثلاثي هجومي نشط.","عندما تحتاج إلى كثافة هجومية في الثلث الأخير مع الحفاظ على محور ارتكاز واضح."],
+["4-4-2","مسطحة أو ماسية / توازن وانضباط جماعي","تنظيم خطوط متقارب يقلل المساحات بين الدفاع والوسط والهجوم.","خطان متماسكان في الدفاع والوسط يغلقان العمق والأطراف، مع ثنائي هجومي يتبادل التحرك والضغط.","في المباريات المتكافئة أو عند الحاجة إلى تأمين النتيجة وصلابة التمركز."],
+["3-2-3-2","ضغط وكثافة في الوسط والهجوم","تفوق عددي في وسط الملعب وخيارات هجومية متعددة عبر العمق والأطراف.","ثلاثة قلوب دفاع + ثنائي ارتكاز/محور + ثلاثي وسط هجومي/أطراف + مهاجمان.","عندما تبحث عن حلول هجومية متنوعة وتضغط لكسر تكتل الخصم، مع الانتباه لتأمين الأطراف عند التحول الدفاعي."],
+["5-3-2 أو 5-2-1-2","تأمين دفاعي ومرتدات منظمة","تحصين منطقة الجزاء والعمق بعدد إضافي من المدافعين والاعتماد على المرتدات السريعة.","ثلاثة قلوب دفاع وظهيران/أجنحة خلفية + وسط يغلق الممرات + مهاجمان سريعان للتحول.","أمام خصوم يمتلكون هجوماً كاسحاً أو عند الحفاظ على تقدم حاسم في الدقائق الأخيرة."],
+["4-2-2-2","مهاجمان وصانعا لعب / ثنائية العمق والأطراف","مرونة عالية بين اللعب من العمق عبر لاعبي الوسط الهجومي والانطلاق عبر المهاجمين.","ارتكازان لتغطية الوسط + لاعبان خلف المهاجمين لصناعة اللعب والربط + مهاجمان يكمل أحدهما الآخر.","عندما تمتلك مهاجمين متكاملين (مثلاً مهاجم قناص وآخر متحرك/مساند)."],
+["4-3-1-2","اختراق من العمق وصانع لعب صريح","تركيز اللعب في العمق بتمريرات سريعة وتبادلات قصيرة بين صانع اللعب والمهاجمين.","ثلاثة لاعبي وسط لتغطية العرض وتأمين الكرة + صانع لعب حر خلف المهاجمين + رأسا حربة.","عندما يكون العمق مفتوحاً نسبياً وتملك لاعبي وسط وصناع لعب بلمسة أولى وتمرير دقيق."],
+["4-1-4-1","كثافة في خط الوسط والتحكم بالرتم","سيطرة واسعة على منطقة الوسط لقطع الكرات مبكراً وبناء اللعب بهدوء.","ارتكاز دفاعي أمام الدفاع + أربعة لاعبي وسط يغطون العرض والعمق + مهاجم وحيد نشط.","عندما يعتمد الخصم على السيطرة في وسط الملعب وتريد تعطيل إيقاعه."],
+["3-4-3","هجومية بالأطراف والضغط العالي","ضغط متقدم ومباشر مع أجنحة هجومية وأطراف نشطة لخلق عرض هجومي مستمر.","ثلاثي دفاعي + لاعبا وسط في العمق ولاعبا جناح/وسط طرفي + ثلاثي هجومي.","عندما تكون متأخراً في النتيجة وتحتاج إلى قلب المباراة هجومياً، مع ضرورة التغطية السريعة خلف الأجنحة."]
+];
+const coaches = [
+["Quick Counter","مدرب بأسلوب الهجمات المرتدة السريعة","مثالي لخطط مثل 4-2-1-3 و4-2-2-2 للتحولات السريعة وضرب المساحات."],
+["Long Ball Counter","مدرب بأسلوب الهجمات المرتدة الطويلة","مناسب للعب الدفاعي المنظم والانطلاق المباشر نحو المهاجمين بعد استخلاص الكرة."],
+["Possession Game","مدرب بأسلوب الاستحواذ","لمن يعتمد على التمرير القصير، وبناء الهجمة من الخلف، والتحكم في نسق اللعب مثل 4-3-3 و4-1-4-1."],
+["Out Wide","مدرب بأسلوب اللعب الواسع / الأطراف","يخدم الخطط التي تعتمد على الأجنحة والظهيرين لفتح الملعب وإرسال العرضيات أو التوغلات الطرفية."],
+["Long Ball","مدرب بأسلوب التمرير الطويل","لمن يفضّل نقل اللعب بسرعة من الدفاع إلى مناطق متقدمة أو الاستفادة من مهاجمين يربحون الكرات الهوائية والمساحات."],
+["Boost / Link-up","مدرب متعدد الأساليب أو بقدرات تعزيز/ربط قوية","يمنح مرونة أكبر عند تغيير أسلوب اللعب أو دعم سمات محددة في التشكيلة."],
+["دفاع ثلاثي أو خماسي","مدرب يلائم التشكيلات الدفاعية الثلاثية أو الخماسية","مثل 5-3-2 أو 3-2-3-2 لتأمين المناطق الخلفية والاعتماد على التحولات المنظمة."],
+["صانع لعب صريح","مدرب يلائم التشكيلات ذات صانع اللعب الصريح","مثل 4-3-1-2 أو 4-2-1-3؛ يدعم الربط بين الوسط والهجوم في المساحات الضيقة."],
+["ضغط هجومي","مدرب مناسب للتشكيلات الهجومية الضاغطة","مثل 3-4-3 أو 4-1-2-3؛ يساعد على الحفاظ على الحيوية الهجومية والضغط المنظم عند الحاجة للتسجيل."],
+["أسلوب بديل","مدرب احتياطي بأسلوب مختلف","وجود مدرب ثانٍ بأسلوب مختلف (مثلاً استحواذ بجانب هجمات مرتدة سريعة) يمنحك حلاً عملياً أمام خصم يناسبه أسلوب آخر."]
+];
+const labels={def:"أخطاء الدفاع والتغطية",attack:"أخطاء بناء اللعب والوسط والهجوم",manage:"تطوير اللاعبين وإدارة المباراة والموارد"};
+const faqList=document.getElementById('faqList');
+function renderFaq(){
+ const q=document.getElementById('search').value.trim().toLowerCase(), cat=document.getElementById('category').value;
+ const filtered=mistakes.filter((m,i)=>(cat==='all'||m[0]===cat)&&(!q||m.join(' ').toLowerCase().includes(q)));
+ faqList.innerHTML=filtered.map(m=>{const n=mistakes.indexOf(m)+1;return `<details class="faq" ${n===1?'open':''}><summary><span class="num">${String(n).padStart(2,'0')}</span><span>${m[1]}</span></summary><div class="answer"><span class="tag">${labels[m[0]]}</span><p><strong>السبب:</strong> ${m[2]}</p><p><strong>الحل:</strong> ${m[3]}</p></div></details>`}).join('');
+ document.getElementById('empty').style.display=filtered.length?'none':'block';
+}
+document.getElementById('search').addEventListener('input',renderFaq);
+document.getElementById('category').addEventListener('change',renderFaq);
+renderFaq();
+document.getElementById('planCards').innerHTML=plans.map((p,i)=>`<article class="card"><span class="tag">الخطة ${String(i+1).padStart(2,'0')}</span><h3>${p[0]} · ${p[1]}</h3><p><b>الفكرة:</b> ${p[2]}</p><p><b>توزيع الأدوار:</b> ${p[3]}</p><p><b>متى تنجح؟</b> ${p[4]}</p></article>`).join('');
+document.getElementById('coachGrid').innerHTML=coaches.map((c,i)=>`<article class="coach"><i>${String(i+1).padStart(2,'0')}</i><div><b>${c[0]}</b><p style="margin:3px 0;color:var(--muted)">${c[1]} — ${c[2]}</p></div></article>`).join('');
+</script>
+</body>
+</html>
